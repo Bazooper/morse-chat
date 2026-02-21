@@ -727,6 +727,7 @@ dependencies = [
 [[package]]
 name = "deranged"
 version = "0.5.7"
+version = "0.5.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "2163a0e204a148662b6b6816d4b5d5668a5f2f8df498ccbd5cd0e864e78fecba"
 dependencies = [
@@ -2352,19 +2353,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "morse-client"
-version = "0.1.0"
-dependencies = [
- "reqwest",
- "serde",
- "serde_json",
- "tauri",
- "tauri-build",
- "tauri-plugin-opener",
-]
-
-[[package]]
-name = "morse-server"
+name = "morse"
 version = "0.1.0"
 dependencies = [
  "rocket",
