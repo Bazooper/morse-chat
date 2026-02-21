@@ -10,3 +10,9 @@ Execute following commands:
 cargo build
 ```
 
+## How to run
+### Server
+Execute following command
+```sh
+cargo run -p morse-server
+```
