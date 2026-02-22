@@ -1,4 +1,5 @@
+const tauriInvoke = (window as any).__TAURI__.core.invoke;
+
 export const greet = async (name: string = ""): Promise<string> => {
-  const { invoke } = await (window as any).__TAURI__.core;
-  return await invoke('greet', { name });
+  return await tauriInvoke('greet', { name });
 }
