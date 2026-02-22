@@ -14,5 +14,19 @@ fn main() {
         }
     }
 
+    // Install frontend dependencies
+    println!("cargo:rerun-if-changed=package.json");
+    std::process::Command::new("npm")
+        .args(&["install"])
+        .status()
+        .expect("Failed to install frontend dependencies");
+
+    // Build the frontend
+    println!("cargo:rerun-if-changed=src");
+    std::process::Command::new("npm")
+        .args(&["run", "build"])
+        .status()
+        .expect("Failed to build frontend");
+
     tauri_build::build()
 }
